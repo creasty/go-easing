@@ -4,7 +4,7 @@ go-easing
 Golang library for easing functions
 
 ```go
-easing.TransitionUint(x0, x1, easing.QuadEaseIn(t))
+easing.Transition(x0, x1, easing.QuadEaseIn(t))
 ```
 
 
