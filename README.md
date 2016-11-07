@@ -10,6 +10,10 @@ easing.Transition(x0, x1, easing.QuadEaseIn(t)) // where t = [0, 1]
 // Create custom easing
 customEase := easing.NewCustomEasing(0.25, 0.1, 0.25, 1.0)
 easing.Transition(x0, x1, customEase(t))
+
+// Time in a range
+t := easing.T(k, 123, 456) // where k = [123, 456]
+easing.Transition(x0, x1, t)
 ```
 
 
@@ -49,12 +53,17 @@ What's included?
 - `BounceEaseIn(t float64) float64`
 - `BounceEaseOut(t float64) float64`
 - `BounceEaseInOut(t float64) float64`
+- `NewCustomEasing(x1, y1, x2, y2 float64) EaseFunc`
 
 ### Transition helpers
 
 - `Transition(from, to, t float64) float64`
 - `TransitionUint(from, to uint, t float64) uint`
 - `TransitionInt(from, to int, t float64) int`
+
+### Time helper
+
+- `T(k, min, max float64) float64`
 
 
 License
