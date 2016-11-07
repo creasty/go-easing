@@ -4,7 +4,12 @@ go-easing
 Golang library for easing functions
 
 ```go
-easing.Transition(x0, x1, easing.QuadEaseIn(t))
+// Using builtin function
+easing.Transition(x0, x1, easing.QuadEaseIn(t)) // where t = [0, 1]
+
+// Create custom easing
+customEase := easing.NewCustomEasing(0.25, 0.1, 0.25, 1.0)
+easing.Transition(x0, x1, customEase(t))
 ```
 
 
